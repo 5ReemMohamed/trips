@@ -1,0 +1,388 @@
+:root {
+    --background-color: #0b1d27;
+    --secondary-bg-color: #eee;
+    --main-color: #f3db85; 
+    --second-color: #a06d49 ; 
+    --text-color: white;
+  }
+  ::selection{
+    background-color: var(--second-color);
+    color: white;
+  }
+  html{
+    scroll-padding-top:95px;
+    
+  }
+  body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: var(--background-color) !important;
+    color: var(--text-color);
+    position: relative;
+  }
+ .overlay{
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    inset: 0;
+
+ }
+  ::-webkit-scrollbar {
+    background-color: var(--background-color);
+    width: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+  }
+  .navbar{
+    background-color: var(--background-color);
+    border-bottom: 1px solid var(--main-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  .navbar-brand p{
+    color: var(--main-color);
+  }
+  .navbar-brand img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;   
+  }
+  .navbar a {
+    color: var(--text-color);
+  }
+  .navbar a:hover,.navbar a:focus{
+    color: var(--main-color);
+  }
+  .navbar-toggler{
+    color: var(--main-color)!important;
+  }
+  .navbar-toggler:focus{
+    border: none ;
+    outline: none;
+    box-shadow: none;
+  }
+  .nav-link.active{
+    color: var(--main-color)!important;
+    font-weight: 500;
+  }
+  header {
+    background-image: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,0.5)), url(../imgs/header8.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;     
+    text-align: center;     
+    padding: 20px;
+  }
+  header h1{
+    color: var(--main-color);
+  } 
+.btn:focus{
+    box-shadow: none;
+}
+  .main-button {
+    min-width: 300px;
+    min-height: 60px;
+    display: inline-flex;
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #fff;
+    background: var(--main-color);
+    background: linear-gradient(90deg, var(--main-color) 0%, var(--second-color) 50%);
+    border: none;
+    border-radius: 1000px;
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+    box-shadow: 0 4px 8px #a06d49;
+  }
+  .main-button:hover{
+    transform: translateY(-4px);
+  }
+  
+  
+header .btn.rounded-pill {
+    color: white !important;
+    border: 2px solid var(--main-color) !important;
+    background-color: var(--main-color);
+    color: var(--second-color)!important;
+    transition: all 0.3s;
+  }
+header .btn.rounded-pill:hover {
+    color: var(--main-color) !important;
+    background-color: transparent;
+  }
+
+  .about img{
+    width: 100%;
+    display: block;
+  }
+  .designed-title {
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: var(--main-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+    background: var(--background-color);
+    border: 2px solid var(--main-color);
+  }
+  
+  .designed-title:hover {
+    background: var(--main-color);
+    color: var(--background-color);
+    box-shadow: 0 0 5px var(--main-color), 0 0 25px var(--main-color),
+      0 0 50px var(--main-color), 0 0 200px var(--main-color);
+    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+  }
+  
+  .designed-title:nth-child(2) {
+    filter: hue-rotate(110deg);
+  }
+  
+  .designed-title span {
+    position: absolute;
+    display: block;
+  }
+  
+  .designed-title span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--main-color));
+    animation: animate1 1s linear infinite;
+  }
+  
+  @keyframes animate1 {
+    0% {
+      left: -100%;
+    }
+    50%,
+    100% {
+      left: 100%;
+    }
+  }
+  
+  .designed-title span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, var(--main-color));
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+  }
+  
+  @keyframes animate2 {
+    0% {
+      top: -100%;
+    }
+    50%,
+    100% {
+      top: 100%;
+    }
+  }
+  
+  .designed-title span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, var(--main-color));
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes animate3 {
+    0% {
+      right: -100%;
+    }
+    50%,
+    100% {
+      right: 100%;
+    }
+  }
+  
+  .designed-title span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, var(--main-color));
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+  }
+  
+  @keyframes animate4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,
+    100% {
+      bottom: 100%;
+    }
+  }
+
+  .about span{
+    color: var(--main-color);
+}
+
+.card {
+    background-color: var(--secondary-bg-color);
+    color: var(--text-color);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    height: 280px;  
+    border-radius: 10px;
+  }
+  .card:hover {
+    transform: scale(1.04);
+  }
+  .contained-circle-btn:hover{
+    background-color: transparent !important;
+    color: var(--main-color) !important;
+  }
+
+  .modal .modal-body .modal-video{
+    width: 100%;
+    height: 500px;
+
+  }
+
+  .card video{
+    width: 100%;
+    object-fit: cover;
+  }
+  .trips .card{
+    height: 500px;
+    overflow: hidden;
+    background-color:transparent;
+    border: 1px solid var(--main-color);
+    box-shadow: 0 4px 8px #a06d49;
+   
+  }
+  .trips .card img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    
+  }
+  .trips .card h3{
+    color: #eeab7b;
+  }
+  .trips .card a{
+    text-decoration: none;
+    border: 1px solid var(--main-color);
+    padding: 10px 20px;
+    border-radius: 1000px;
+    text-transform: capitalize;
+    transition: all 0.5s ease-in-out;
+  }
+  .trips .card button{
+    background-color: transparent;
+    border: none;
+    color: var(--main-color);
+    transition: all 0.2s ease-in-out;
+  }
+  .trips .card a:hover{ 
+    background-color: var(--second-color);
+    border: 1px solid var(--second-color);
+  }
+  .trips .card button:hover{
+    color: white;
+  }
+  .trip-detail .content{
+    box-shadow: 0 4px 8px #a06d49;
+  }
+  .trip-detail h3{
+    color: #f5aa74;
+  }
+  .trip-detail img{
+    width: 100%;
+    object-fit: cover;
+  }
+  .trip-detail .price{
+    color: var(--main-color);
+  }
+  @media screen and (min-width:992px) {
+    .trip-detail img{
+      width: 50%;
+      object-fit: cover;
+    }
+  }
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev{
+    color: var(--main-color) !important;
+  }
+
+ 
+  
+  .swiper-pagination-bullet{
+    background-color: var(--main-color) !important;
+  }
+  footer{
+    border-top: 1px solid var(--main-color);
+  }
+
+  footer img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  footer .sitename{
+    color: var(--main-color);
+  }
+  footer .credits a{
+    color: var(--main-color);
+  }
+
+  footer .icons-brands a{
+    color: var(--text-color);
+    transition: all 0.5s ease-in-out;
+  }
+  footer .icons-brands a:hover{
+    color: var(--main-color);
+  }
+  .modal h1, .modal p {
+    color: #001f28;
+  }
