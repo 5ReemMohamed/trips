@@ -77,20 +77,36 @@
     text-align: center;     
     padding: 20px;
   }
-  header h1{
+  .typing-container {
+    display: inline-block;
+  }
+  .typing-container h1 {
     color: var(--main-color);
-    animation: fadeSlideUp 2s ease-in-out infinite alternate;
-  } 
-  @keyframes fadeSlideUp {
-    from {
-      opacity: 0.5;
-      transform: translateY(10px);
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid var(--main-color);
+    font-size: 2em;
+    animation: typing 6s steps(120, end) alternate infinite,
+               blink 14s infinite;
+  }
+  @keyframes typing {
+    0% {
+      width: 0;
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+    50% {
+      width: 100%;
+    }
+    100% {
+      width: 0;
     }
   }
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  
 .btn:focus{
     box-shadow: none;
 }
