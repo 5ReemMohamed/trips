@@ -79,7 +79,18 @@
   }
   header h1{
     color: var(--main-color);
+    animation: fadeSlideUp 2s ease-in-out infinite alternate;
   } 
+  @keyframes fadeSlideUp {
+    from {
+      opacity: 0.5;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 .btn:focus{
     box-shadow: none;
 }
@@ -244,6 +255,32 @@ header .btn.rounded-pill:hover {
     color: var(--main-color);
 }
 
+.about .content{
+  overflow: hidden;
+    position: relative;
+}
+.animate-heading {
+  display: inline-block;
+  position: relative;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation-duration: 7s;
+  animation-name: slideIn;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .card {
     background-color: var(--secondary-bg-color);
     color: var(--text-color);
@@ -383,6 +420,24 @@ header .btn.rounded-pill:hover {
   footer .icons-brands a:hover{
     color: var(--main-color);
   }
+  footer .follow{
+    font-size: 14px;
+    color: var(--text-color);
+  }
+  .modal-content{
+    background-color: var(--background-color)!important;
+  }
+  .modal-content .btn-close{
+    color: var(--main-color)!important;
+    background: none;
+  }
+  .modal-header {
+    border-bottom: 1px solid var(--main-color);
+  }
+  .modal-footer{
+    border-top: 1px solid var(--main-color);
+
+  }
   .modal h1, .modal p {
-    color: #001f28;
+    color: var(--main-color);
   }
